@@ -35,9 +35,6 @@
 }
 
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background-color: #000000;
   background-image: radial-gradient(circle, #b2f2ff 1%, transparent 40%),
@@ -50,6 +47,15 @@
   font-family: "Arial", sans-serif;
   position: relative;
   overflow: hidden;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title img {
+  width: 14%;
 }
 
 h1 {

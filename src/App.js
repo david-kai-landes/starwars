@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../src/styles/App.css";
+import logo from "../src/img/Star_Wars_Logo.png";
 
 function App() {
   return (
     <div className="App">
-      <h1>Star Wars</h1>
+      <div className="title">
+        <img src={logo} alt="logo" />
+      </div>
     </div>
   );
 }
