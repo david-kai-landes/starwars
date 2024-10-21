@@ -1,30 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "../styles/characters.css";
+import React from "react";
 
-const Characters = () => {
-  const [dataFetched, setDataFetched] = useState([]);
-  // const [] = useState();
-
-  let api = "https://swapi.dev/api/people/";
-
-  useEffect(() => {
-    (async function () {
-      try {
-        let data = await fetch(api).then((response) => response.json());
-        setDataFetched(data);
-      } catch (error) {
-        console.error("Error Fetching Data From API", error);
-      }
-    })();
-  }, [dataFetched]);
-
-  console.log("DATA ==> ", dataFetched);
-
+function Characters() {
   return (
-    <div className="characters">
-      <div>CHARACTERS</div>
+    <div>
+      <h2>Characters of Star Wars</h2>
+      {/* Add content about People here */}
     </div>
   );
-};
+}
 
 export default Characters;
