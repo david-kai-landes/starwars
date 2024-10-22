@@ -48,13 +48,13 @@
   position: relative;
   overflow: hidden;
 }
-.title {
+.logoCont {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.title img {
+.logoCont img {
   width: 14%;
   animation: logoZoom 2s infinite alternate;
 }
@@ -75,6 +75,13 @@ h1 {
   z-index: 1;
 }
 /* /........................................................................./ */
+.link {
+}
+
+.link_vehicles {
+  max-width: 18.5%;
+}
+
 .card-container {
   height: 65vh;
   display: flex;
@@ -155,7 +162,7 @@ h1 {
 }
 .card.vehicles {
   background-color: #333;
-  width: 90%;
+  width: 80%;
   height: 100%;
   color: white;
   padding: 20px;
