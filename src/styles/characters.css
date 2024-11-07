@@ -1,19 +1,17 @@
-/* Entire screen layout */
 .character-screen {
   height: 100vh;
-  background-color: #0b0c10; /* Dark space-like background */
+  background-color: #0b0c10;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.05) 1px,
       transparent 1px
     ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px; /* Data grid effect */
+  background-size: 50px 50px;
   position: relative;
   color: white;
   font-family: "Arial", sans-serif;
 }
 
-/* Title styling with a futuristic glowing effect */
 .charactersMainCont {
   margin-top: 2%;
   flex-direction: column;
@@ -28,12 +26,11 @@
   color: #f0f0f0;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 0px 0px 15px #2c75ff, 0px 0px 30px #d41404; /* Dual light saber glow effect */
+  text-shadow: 0px 0px 15px #2c75ff, 0px 0px 30px #d41404;
   margin-bottom: 20px;
   animation: glow 2s infinite alternate;
 }
 
-/* Glow animation for the title */
 @keyframes glow {
   from {
     text-shadow: 0px 0px 15px #2c75ff, 0px 0px 30px #d41404;
@@ -43,7 +40,6 @@
   }
 }
 
-/* Floating particle effect for subtle space dust */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -65,7 +61,6 @@
   animation: float 5s ease-in-out infinite;
 }
 
-/* Randomly placed particles */
 .particle:nth-child(1) {
   top: 10%;
   left: 20%;
@@ -92,7 +87,6 @@
   animation-duration: 8s;
 }
 
-/* Terminal-style highlight box for character info */
 .character-highlight {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 20px;

@@ -13,7 +13,7 @@ function Characters() {
       </Link>
       <div className="charactersMainCont">
         <h2 className="charactersSubtitle">Characters</h2>
-        {/* Future character data will appear here */}
+        {/* Characters here */}
         <div className="character-highlight">
           <p>Select a character to view their details...</p>
         </div>

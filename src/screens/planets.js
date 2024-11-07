@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/planets.css";
 import logo from "../img/Star_Wars_Logo.png";
+import "../styles/planets.css";
 
 const Planets = () => {
   const [planets, setPlanets] = useState([]);
 
-  // Fetch planet data from the SWAPI API
+  const colors = ["#c2b280", "#2e8b57", "#d41404", "#A9A9A9", "#FF4500"];
+
   useEffect(() => {
     (async function () {
       try {
-        let data = await fetch("https://swapi.dev/api/planets/").then(
+        let data = await fetch(`https://swapi.dev/api/planets/`).then(
           (response) => response.json()
         );
         setPlanets(data.results);
@@ -29,9 +30,12 @@ const Planets = () => {
       </Link>
       <h2 className="title">Planets</h2>
       <div className="planet-container">
-        {/* Dynamically render planets from API */}
         {planets.map((planet, index) => (
-          <div key={index} className="planet">
+          <div
+            key={index}
+            className="planet"
+            style={{ backgroundColor: colors[index % colors.length] }}
+          >
             <div className="orbit"></div>
             <p>{planet.name}</p>
           </div>
