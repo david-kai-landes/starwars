@@ -10,6 +10,7 @@
   position: relative;
   color: white;
   font-family: "Arial", sans-serif;
+  overflow: hidden;
 }
 
 .charactersMainCont {
@@ -91,8 +92,8 @@
   background-color: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  width: 60%;
-  height: 70%;
+  width: 75%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,4 +128,86 @@
   pointer-events: none;
   top: 0;
   left: 0;
+}
+/* //.......................................................... */
+.character-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  /* width: 250px; */
+  color: #f0f0f0;
+  margin: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  text-align: left;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.character-card {
+  border: solid 1px #cbc8c8;
+  border-radius: 8px;
+  width: 280px;
+  padding: 8px;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(44, 117, 255, 0.3), 0 0 20px rgba(212, 20, 4, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.character-name {
+  font-size: 1.5rem;
+  color: #2c75ff;
+  text-shadow: 0px 0px 8px #2c75ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.character-stats p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.character-stats strong {
+  color: #ff4500;
+}
+
+.character-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.character-card:hover::before {
+  opacity: 1;
+  animation: rotateGlow 4s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -19,6 +19,7 @@ const Starships = () => {
     })();
   }, []);
 
+  // console.log('DATAAA == ', )
   return (
     <div className="starships-screen">
       <Link to="/">
