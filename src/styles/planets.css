@@ -12,7 +12,15 @@
   align-items: center;
 }
 
-.title {
+.planetsMianCont {
+  width: 60%;
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.planetsTitle {
   font-size: 1.5rem;
   color: #f0f0f0;
   text-transform: uppercase;

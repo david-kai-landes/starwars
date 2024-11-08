@@ -1,7 +1,7 @@
 .vehicles-screen {
   height: 100vh;
   background-color: #1a1a1a;
-  /* background-image: url("../img/rugged_metal.jpg"); */
+  background-image: url("../img/darkHangarScifi.webp");
   background-size: cover;
   position: relative;
   color: white;
@@ -13,7 +13,7 @@
 }
 .vehicleMainCont {
   width: 60%;
-  margin-top: 2%;
+  margin-top: 4%;
   display: flex;
   align-items: center;
   flex-direction: column;

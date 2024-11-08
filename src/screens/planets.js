@@ -28,18 +28,20 @@ const Planets = () => {
           <img src={logo} alt="logo" />
         </div>
       </Link>
-      <h2 className="title">Planets</h2>
-      <div className="planet-container">
-        {planets.map((planet, index) => (
-          <div
-            key={index}
-            className="planet"
-            style={{ backgroundColor: colors[index % colors.length] }}
-          >
-            <div className="orbit"></div>
-            <p>{planet.name}</p>
-          </div>
-        ))}
+      <div className="planetsMianCont">
+        <h2 className="planetsTitle">Planets</h2>
+        <div className="planet-container">
+          {planets.map((planet, index) => (
+            <div
+              key={index}
+              className="planet"
+              style={{ backgroundColor: colors[index % colors.length] }}
+            >
+              <div className="orbit"></div>
+              <p>{planet.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
