@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/Star_Wars_Logo.png";
 import "../styles/planets.css";
+//
+import ModalPlanets from "../components/ModalPlanets";
 
 const Planets = () => {
   const [planets, setPlanets] = useState([]);
+  //
 
   const colors = ["#c2b280", "#2e8b57", "#d41404", "#A9A9A9", "#FF4500"];
 

@@ -49,6 +49,7 @@
   overflow: hidden;
 }
 .logoCont {
+  margin-top: 2.5%;
   display: flex;
   justify-content: center;
   align-items: center;
