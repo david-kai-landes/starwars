@@ -9,10 +9,14 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
+  bgcolor: "#1a1a1a",
+  color: "#00eaff",
+  border: "2px solid #00eaff",
+  borderRadius: "8px",
+  boxShadow: "0px 0px 15px 5px rgba(0, 234, 255, 0.6)",
   p: 4,
+  textAlign: "center",
+  fontFamily: "'Orbitron', sans-serif",
 };
 
 const ModalPlanets = ({ isOpen, onClose, data }) => {
@@ -25,20 +29,32 @@ const ModalPlanets = ({ isOpen, onClose, data }) => {
       aria-describedby="planet-modal-description"
     >
       <Box sx={style}>
-        <Typography id="planet-modal-description" sx={{ mt: 2 }}>
-          <strong>Rotation Period:</strong> {data.rotation_period}
+        <Typography
+          id="planet-modal-description"
+          variant="h5"
+          sx={{ color: "#ff6b6b", mb: 2 }}
+        >
+          <strong>{data.name.toUpperCase()}</strong>
           <br />
-          <strong>Orbital Period:</strong> {data.orbital_period}
+        </Typography>
+        <Typography>
+          <strong style={{ color: "#00eaff" }}>Rotation Period:</strong>{" "}
+          {data.rotation_period}
           <br />
-          <strong>Diameter:</strong> {data.diameter} km
+          <strong style={{ color: "#00eaff" }}>Orbital Period:</strong>{" "}
+          {data.orbital_period}
           <br />
-          <strong>Climate:</strong> {data.climate}
+          <strong style={{ color: "#00eaff" }}>Diameter:</strong>{" "}
+          {data.diameter} km
           <br />
-          <strong>Gravity:</strong> {data.gravity}
+          <strong style={{ color: "#00eaff" }}>Climate:</strong> {data.climate}
           <br />
-          <strong>Terrain:</strong> {data.terrain}
+          <strong style={{ color: "#00eaff" }}>Gravity:</strong> {data.gravity}
           <br />
-          <strong>Population:</strong> {data.population}
+          <strong style={{ color: "#00eaff" }}>Terrain:</strong> {data.terrain}
+          <br />
+          <strong style={{ color: "#00eaff" }}>Population:</strong>{" "}
+          {data.population} inhabitants
         </Typography>
       </Box>
     </Modal>

@@ -8,8 +8,19 @@ import ModalPlanets from "../components/ModalPlanets";
 const Planets = () => {
   const [planets, setPlanets] = useState([]);
   //
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlanet, setSelectedPlanet] = useState(null);
 
   const colors = ["#c2b280", "#2e8b57", "#d41404", "#A9A9A9", "#FF4500"];
+
+  const handleOpenModal = (planet) => {
+    setSelectedPlanet(planet);
+    setIsModalOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedPlanet(null);
+  };
 
   useEffect(() => {
     (async function () {
@@ -38,6 +49,7 @@ const Planets = () => {
             <div
               key={index}
               className="planet"
+              onClick={() => handleOpenModal(planet)}
               style={{ backgroundColor: colors[index % colors.length] }}
             >
               <div className="orbit"></div>
@@ -46,6 +58,11 @@ const Planets = () => {
           ))}
         </div>
       </div>
+      <ModalPlanets
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        data={selectedPlanet}
+      />
     </div>
   );
 };
