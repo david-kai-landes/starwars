@@ -19,15 +19,15 @@ const style = {
   fontFamily: "'Orbitron', sans-serif",
 };
 
-const ModalPlanets = ({ isOpen, onClose, data }) => {
+const MadalStarShip = ({ isOpen, onClose, data }) => {
   if (!data) return null;
-  console.log("DATA =>>>", data.name);
+  console.log("DATA =>>>", data);
   return (
     <Modal
       open={isOpen}
       onClose={onClose}
-      aria-labelledby="planet-modal-title"
-      aria-describedby="planet-modal-description"
+      aria-labelledby="starShip-modal-title"
+      aria-describedby="starShip-modal-description"
     >
       <Box sx={style}>
         <Typography
@@ -35,31 +35,33 @@ const ModalPlanets = ({ isOpen, onClose, data }) => {
           variant="h5"
           sx={{ color: "#ff6b6b", mb: 2 }}
         >
-          <strong>{data.name.toUpperCase()}</strong>
+          <strong>{data.name}</strong>
           <br />
         </Typography>
         <Typography>
-          <strong style={{ color: "#00eaff" }}>Rotation Period:</strong>{" "}
-          {data.rotation_period} Hours
+          <strong style={{ color: "#00eaff" }}>Cargo Capacity:</strong>{" "}
+          {data.cargo_capacity}
           <br />
-          <strong style={{ color: "#00eaff" }}>Orbital Period:</strong>{" "}
-          {data.orbital_period} Days
+          <strong style={{ color: "#00eaff" }}>Consumables:</strong>{" "}
+          {data.consumables}
           <br />
-          <strong style={{ color: "#00eaff" }}>Diameter:</strong>{" "}
-          {data.diameter} km
+          <strong style={{ color: "#00eaff" }}>Price:</strong>{" "}
+          {data.cost_in_credits}
           <br />
-          <strong style={{ color: "#00eaff" }}>Climate:</strong> {data.climate}
+          <strong style={{ color: "#00eaff" }}>Length:</strong> {data.length}
           <br />
-          <strong style={{ color: "#00eaff" }}>Gravity:</strong> {data.gravity}
+          <strong style={{ color: "#00eaff" }}>Manufacture:</strong>{" "}
+          {data.manufacturer}
           <br />
-          <strong style={{ color: "#00eaff" }}>Terrain:</strong> {data.terrain}
+          <strong style={{ color: "#00eaff" }}>
+            Max Atmosphering Speed:
+          </strong>{" "}
+          {data.max_atmosphering_speed}
           <br />
-          <strong style={{ color: "#00eaff" }}>Population:</strong>{" "}
-          {data.population} inhabitants
         </Typography>
       </Box>
     </Modal>
   );
 };
 
-export default ModalPlanets;
+export default MadalStarShip;
