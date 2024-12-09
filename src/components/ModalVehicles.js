@@ -10,28 +10,28 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "#1a1a1a",
-  color: "#00eaff",
-  border: "2px solid #00eaff",
+  color: "#FF4500",
+  border: "2px solid #FF4500",
   borderRadius: "8px",
-  boxShadow: "0px 0px 15px 5px rgba(0, 234, 255, 0.6)",
+  boxShadow: "0 0 15px rgba(255, 69, 0, 0.5)",
   p: 4,
   textAlign: "center",
   fontFamily: "'Orbitron', sans-serif",
 };
 
-const MadalStarShip = ({ isOpen, onClose, data }) => {
+const ModalVehicles = ({ isOpen, onClose, data }) => {
   if (!data) return null;
-  // console.log("DATA =>>>", data);
+  console.log("DATA ===>> ", data);
   return (
     <Modal
       open={isOpen}
       onClose={onClose}
-      aria-labelledby="starShip-modal-title"
-      aria-describedby="starShip-modal-description"
+      aria-labelledby="vehicle-modal-title"
+      aria-describedby="vehicle-modal-description"
     >
       <Box sx={style}>
         <Typography
-          id="planet-modal-description"
+          id="vehicle-modal-description"
           variant="h5"
           sx={{ color: "#ff6b6b", mb: 2 }}
         >
@@ -39,21 +39,23 @@ const MadalStarShip = ({ isOpen, onClose, data }) => {
           <br />
         </Typography>
         <Typography>
-          <strong style={{ color: "#00eaff" }}>Cargo Capacity:</strong>{" "}
+          <strong style={{ color: "#ffff" }}>Model:</strong> {data.model}
+          <br />
+          <strong style={{ color: "#ffff" }}>Cargo Capacity:</strong>{" "}
           {data.cargo_capacity}
           <br />
-          <strong style={{ color: "#00eaff" }}>Consumables:</strong>{" "}
+          <strong style={{ color: "#ffff" }}>Consumables:</strong>{" "}
           {data.consumables}
           <br />
-          <strong style={{ color: "#00eaff" }}>Price:</strong>{" "}
+          <strong style={{ color: "#ffff" }}>Price:</strong>{" "}
           {data.cost_in_credits}
           <br />
-          <strong style={{ color: "#00eaff" }}>Length:</strong> {data.length}
+          <strong style={{ color: "#ffff" }}>Length:</strong> {data.length}
           <br />
-          <strong style={{ color: "#00eaff" }}>Manufacture:</strong>{" "}
+          <strong style={{ color: "#ffff" }}>Manufacture:</strong>{" "}
           {data.manufacturer}
           <br />
-          <strong style={{ color: "#00eaff" }}>
+          <strong style={{ color: "#ffff" }}>
             Max Atmosphering Speed:
           </strong>{" "}
           {data.max_atmosphering_speed}
@@ -64,4 +66,4 @@ const MadalStarShip = ({ isOpen, onClose, data }) => {
   );
 };
 
-export default MadalStarShip;
+export default ModalVehicles;

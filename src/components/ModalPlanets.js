@@ -21,7 +21,7 @@ const style = {
 
 const ModalPlanets = ({ isOpen, onClose, data }) => {
   if (!data) return null;
-  console.log("DATA =>>>", data.name);
+  // console.log("DATA =>>>", data);
   return (
     <Modal
       open={isOpen}
