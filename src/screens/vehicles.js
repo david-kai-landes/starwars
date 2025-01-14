@@ -21,7 +21,7 @@ const Vehicles = () => {
   };
 
   useEffect(() => {
-    fetch("https://swapi.dev/api/vehicles/")
+    fetch("https://swapi.py4e.com/api/vehicles/")
       .then((response) => response.json())
       .then((data) => setVehicles(data.results))
       .catch((error) => console.error("Error fetching vehicles:", error));

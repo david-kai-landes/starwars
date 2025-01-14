@@ -9,7 +9,7 @@ function Characters() {
   useEffect(() => {
     (async function () {
       try {
-        let data = await fetch("https://swapi.dev/api/people/").then(
+        let data = await fetch("https://swapi.py4e.com/api/people/").then(
           (response) => response.json()
         );
         setCharacters(data.results);
@@ -19,7 +19,7 @@ function Characters() {
     })();
   }, []);
 
-  console.log("DATAAA == ", characters);
+  console.log("CHAR DATA == ", characters);
 
   return (
     <div className="character-screen terminal">

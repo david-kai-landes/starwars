@@ -23,7 +23,7 @@ const Starships = () => {
   useEffect(() => {
     (async function () {
       try {
-        let data = await fetch("https://swapi.dev/api/starships/").then(
+        let data = await fetch("https://swapi.py4e.com/api/starships/").then(
           (response) => response.json()
         );
         setStarships(data.results);

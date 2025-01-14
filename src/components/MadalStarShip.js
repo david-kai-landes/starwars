@@ -21,7 +21,6 @@ const style = {
 
 const MadalStarShip = ({ isOpen, onClose, data }) => {
   if (!data) return null;
-  // console.log("DATA =>>>", data);
   return (
     <Modal
       open={isOpen}

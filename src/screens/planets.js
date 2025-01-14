@@ -25,7 +25,7 @@ const Planets = () => {
   useEffect(() => {
     (async function () {
       try {
-        let data = await fetch(`https://swapi.dev/api/planets/`).then(
+        let data = await fetch(`https://swapi.py4e.com/api/planets/`).then(
           (response) => response.json()
         );
         setPlanets(data.results);
