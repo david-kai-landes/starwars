@@ -30,7 +30,7 @@
 }
 
 .planet-container {
-  width: 60%;
+  /* width: 60%; */
   display: flex;
   gap: 50px;
   justify-content: center;
